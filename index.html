@@ -229,6 +229,7 @@
           const date2 = new Date("2028-07-21T00:00:00"); // Target date
           const date3 = date2 - date1; // Difference in milliseconds
           const days = Math.floor(date3 / (1000 * 60 * 60 * 24)); // Convert to days
+          //const days = date3.getDate();
           obj.innerText = `${days}`; // Update the text content of the timer
         }
         setInterval(day, 1000); // Call 'day' every second
