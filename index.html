@@ -239,7 +239,7 @@
           const date1 = new Date(); // Current date
           const date2 = new Date("2028-07-21T00:00:00"); // Target date
           const date3 = date2 - date1; // Difference in milliseconds
-          const hours = Math.floor((date3 / (1000 * 60 * 60)) % 24); // Convert to Hour
+          const hours = Math.floor((date3 / (1000 * 60 * 60)) % 24); // Convert to Hour % 24 (modulo 24) ensures we only get the remaining hours after full days are removed
           obj.innerText = `${hours}`; // Update the text content of the timer
         }
         setInterval(hour, 1000); // Call 'day' every second
